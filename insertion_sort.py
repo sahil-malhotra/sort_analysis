@@ -20,10 +20,10 @@ def test():
 
     find_all_list_y = []
 
-
     random_lists = []
     range_num = 1000
 
+    # creating 15 random lists with varying length like 1000, 2000.., till 15000.
     for one_list in range(15):
         random_lists.append([])
         for x in range(range_num):
@@ -33,6 +33,7 @@ def test():
 
         print(random_lists[one_list])
 
+    # Each list being tested 50 times and then calculating the average time taken for execution of each list
     for i in range(50):
         graph_list_y = []
         for one_item in range(15):
@@ -47,6 +48,7 @@ def test():
 
     final_avg_list_y = list(map(mean, zip(*find_all_list_y)))
 
+    # plotting the graph
     plt.xlabel('List Length')
     plt.ylabel('Time Taken')
     plt.plot(graph_list_x, final_avg_list_y)
