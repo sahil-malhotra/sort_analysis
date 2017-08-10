@@ -1,2 +1,2 @@
-# insertion_sort_analysis
-Plotted a graph for insertion sort.
+# sort_analysis
+Plotted a graph for insertion sort and merge sort.
