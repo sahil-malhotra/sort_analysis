@@ -10,7 +10,7 @@ def insertion(list):
             list[i+1] = list[i]
             list[i] = value
             i = i - 1
-    print(list)
+
 
 
 def mean(a):
@@ -27,14 +27,14 @@ def test():
     random_lists = []
     sorted_list_y = []
     worst_list_y = []
-    range_num = 2000
+    range_num = 200
 
     # creating 15 random lists
     for one_list in range(15):
         random_lists.append([])
         for x in range(range_num):
             random_lists[one_list].append(random.randint(1, 1001))
-        range_num += 2000
+        range_num += 200
         graph_list_x.append(len(random_lists[one_list]))
 
         print(random_lists[one_list])
@@ -51,8 +51,9 @@ def test():
     for i in range(50):
         graph_list_y = []
         for one_item in range(15):
+            pass_list = random_lists[one_item][:]
             start = time.clock()
-            insertion(random_lists[one_item])
+            insertion(pass_list)
             elapsed = (time.clock() - start)
 
             graph_list_y.append(elapsed)
@@ -66,8 +67,9 @@ def test():
     for i in range(50):
         graph_sorted_list_y = []
         for one_item in range(15):
+            pass_list = sorted_list_y[one_item][:]
             start = time.clock()
-            insertion(sorted_list_y[one_item])
+            insertion(pass_list)
             elapsed = (time.clock() - start)
 
             graph_sorted_list_y.append(elapsed)
@@ -81,8 +83,9 @@ def test():
     for i in range(50):
         graph_worst_list_y = []
         for one_item in range(15):
+            pass_list = worst_list_y[one_item][:]
             start = time.clock()
-            insertion(worst_list_y[one_item])
+            insertion(pass_list)
             elapsed = (time.clock() - start)
 
             graph_worst_list_y.append(elapsed)
