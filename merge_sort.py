@@ -49,14 +49,14 @@ def test():
     random_lists = []
     sorted_list_y = []
     worst_list_y = []
-    range_num = 200
+    range_num = 2000
 
     # creating 15 random lists
     for one_list in range(15):
         random_lists.append([])
         for x in range(range_num):
             random_lists[one_list].append(random.randint(1, 1001))
-        range_num += 200
+        range_num += 2000
         graph_list_x.append(len(random_lists[one_list]))
 
         print(random_lists[one_list])

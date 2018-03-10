@@ -27,14 +27,14 @@ def test():
     random_lists = []
     sorted_list_y = []
     worst_list_y = []
-    range_num = 200
+    range_num = 2000
 
     # creating 15 random lists
     for one_list in range(15):
         random_lists.append([])
         for x in range(range_num):
             random_lists[one_list].append(random.randint(1, 1001))
-        range_num += 200
+        range_num += 2000
         graph_list_x.append(len(random_lists[one_list]))
 
         print(random_lists[one_list])
@@ -55,11 +55,12 @@ def test():
             start = time.clock()
             insertion(pass_list)
             elapsed = (time.clock() - start)
+            print(pass_list)
 
             graph_list_y.append(elapsed)
 
         find_all_list_y.append(graph_list_y)
-        print(graph_list_y)
+
 
     final_avg_list_y = list(map(mean, zip(*find_all_list_y)))
 
@@ -71,6 +72,7 @@ def test():
             start = time.clock()
             insertion(pass_list)
             elapsed = (time.clock() - start)
+            print(pass_list)
 
             graph_sorted_list_y.append(elapsed)
 
@@ -87,6 +89,7 @@ def test():
             start = time.clock()
             insertion(pass_list)
             elapsed = (time.clock() - start)
+            print(pass_list)
 
             graph_worst_list_y.append(elapsed)
 
